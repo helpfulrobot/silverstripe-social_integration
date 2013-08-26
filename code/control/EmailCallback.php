@@ -2,9 +2,9 @@
 
 class EmailCallback extends SocialIntegrationControllerBaseClass implements SocialIntegrationAPIInterface {
 
-	public static set_number_of_friends_that_can_be_retrieved($i) {self::$number_of_friends_that_can_be_retrieved = $i;}
-	public static get_number_of_friends_that_can_be_retrieved() {return self::$number_of_friends_that_can_be_retrieved;}
-	public static get_updates() {return null;}
+	public static function set_number_of_friends_that_can_be_retrieved($i) {self::$number_of_friends_that_can_be_retrieved = $i;}
+	public static function get_number_of_friends_that_can_be_retrieved() {return self::$number_of_friends_that_can_be_retrieved;}
+	public static function get_updates($lastNumber) {return null;}
 	/**
 	 * make sure to return TRUE as response if the message is sent
 	 * successfully
