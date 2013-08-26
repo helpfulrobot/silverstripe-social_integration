@@ -38,7 +38,13 @@ abstract class SocialIntegrationControllerBaseClass extends Controller {
 	 * )
 	 */
 	public static function get_login_button($backURL = "", $member){
+
 		//back URL
+		if(!$backURL) {
+			if(isset($_GET["BackURL"])) {
+				$backURL = $_GET["BackURL"];
+			}
+		}
 		if(!$backURL) {
 			$backURL = $_SERVER['REQUEST_URI'];
 		}
